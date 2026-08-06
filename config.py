@@ -3,7 +3,7 @@ config.py
 ---------
 Configuración del entorno de Deep Learning:
 - Detección automática de dispositivo (CUDA / MPS / CPU)
-- Fijación de semillas de aleatoriedad para reproducibilidad
+- Fijación de semillas de aleatoriedad
 """
 
 import random
@@ -12,7 +12,6 @@ import torch
 
 
 def get_device() -> torch.device:
-    """Detecta automáticamente el mejor dispositivo disponible."""
     if torch.cuda.is_available():
         return torch.device("cuda")
     if torch.backends.mps.is_available():
@@ -21,7 +20,6 @@ def get_device() -> torch.device:
 
 
 def set_seed(seed: int = 42) -> None:
-    """Fija las semillas de todas las fuentes de aleatoriedad relevantes."""
     random.seed(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
