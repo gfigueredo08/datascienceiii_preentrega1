@@ -16,8 +16,6 @@ def get_dataloaders(batch_size: int = 16, val_size: float = 0.2, seed: int = 42)
     """
     Carga el dataset Iris (clasificación multiclase, 3 clases, 4 features),
     lo estandariza y lo separa en train/val.
-
-    Devuelve: train_loader, val_loader, n_features, n_classes
     """
     X, y = load_iris(return_X_y=True)
 
