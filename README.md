@@ -10,7 +10,7 @@ un dataset de referencia.
 ### Estructura del repositorio
 ```
 proyecto-ds3/
-├── data/                # (dataset cargado directamente vía sklearn, no requiere archivos locales)
+├── data/                # (dataset cargado directamente vía sklearn)
 ├── src/
 │   ├── config.py        # device (cpu/cuda/mps), seeds, hiperparámetros
 │   ├── data.py           # carga y preparación del dataset (DataLoaders)
@@ -22,8 +22,8 @@ proyecto-ds3/
 ```
 
 ### Dataset utilizado
-Se usó el dataset **Iris** (clásico, vía `sklearn.datasets.load_iris`) como dataset de
-referencia para esta prueba técnica: 150 muestras, 4 features numéricas, 3 clases.
+Se usó el dataset **Iris** (vía `sklearn.datasets.load_iris`) como dataset de
+referencia para esta prueba: 150 muestras, 4 features numéricas, 3 clases.
 Se aplicó `train_test_split` estratificado (80/20) y estandarización (`StandardScaler`,
 ajustado solo con el set de entrenamiento para evitar data leakage).
 
@@ -63,7 +63,3 @@ pip install -r requirements.txt
 cd src
 python train.py
 ```
-
-### Próximos pasos
-Este pipeline base servirá como fundación para los siguientes checkpoints del proyecto
-(clasificadores de texto, sistemas de traducción y modelos generativos).
