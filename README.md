@@ -1,3 +1,5 @@
+![Test pipeline](https://github.com/gfigueredo08/datascienceiii_preentrega1/actions/workflows/test-pipeline.yml/badge.svg)
+
 # Proyecto Integrador — Data Science III
 
 ## Pre-Entrega N°1: Pipeline de entrenamiento, validación y clasificador base
