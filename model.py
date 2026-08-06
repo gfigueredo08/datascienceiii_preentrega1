@@ -3,7 +3,7 @@ model.py
 --------
 Arquitectura base: un MLP de pocas capas (nn.Sequential) para
 clasificación multiclase. Cumple con el requisito de "clasificador
-base" pedido en el checkpoint (no se busca complejidad).
+base".
 """
 
 import torch.nn as nn
